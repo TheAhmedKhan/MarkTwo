@@ -1,19 +1,19 @@
 var readlineSync=require('readline-sync');
-console.log("Welcome To My Game, Do You Know Me");
+console.log("Welcome To Hero Fandom game");
 Name=readlineSync.question("Tell me your name ");
 console.log(Name);
 console.log("You get 1 correct point for every correct answer");
 var points=0;
 
-var Questions=["What is my nickname :","What I want to be :","What is my school name :","What is my hobby:","What is my dream car:"];
-var Answers=["don","programmer","REHS","Travelling","Mustang"];
+var Questions=["How many Infinity Stones are there?(write in letters) :","Where is Captain America from? :","Who is Tony Starks father? :","What type of doctor is Doctor Strange:","Captain America's shield and Bucky's arm are made of what?:"];
+var Answers=["six","Brooklyn","Howard Stark","A neurosurgeon","Vibranium"];
 
 
 for(var i=0;i<=4;i++){
 
 	function QnA(){
 
-		if (readlineSync.question(Questions[i])==Answers[i]) {
+		if (readlineSync.question(Questions[i]).toUpperCase()==Answers[i].toUpperCase()) {
 	
 		points++
 		console.log("Correct you get "+points+"points");
